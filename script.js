@@ -1,11 +1,11 @@
-const registerButton = document.getElementById('register')
-const loginButton = document.getElementById('login')
-const container = document.getElementById('container')
- 
+const container = document.querySelector('.container');
+const LoginLink = document.querySelector('.SignInLink');
+const RegisterLink = document.querySelector('.SignUpLink');
 
-registerButton.onclick = function(){
-	 container.className = 'active'
-}
-loginButton.onclick = function(){
-		container.className = 'close'
-}
+RegisterLink.addEventListener('click', () =>{
+    container.classList.add('active');
+})
+
+LoginLink.addEventListener('click', () => {
+    container.classList.remove('active');
+})
